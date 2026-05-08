@@ -61,24 +61,27 @@ timeline
 
 ```mermaid
 flowchart TD
-    subgraph Rostov[Семья Ростовы]
-        R_old[Граф Ростов] --> R_nata[Наташа]
-        R_old --> R_nik[Николай]
-        R_old --> R_pet[Петя]
-        R_old --> R_vera[Вера]
-        R_old --> R_son[Соня]
+    subgraph Rostov[Семья Ростовы - Москва и имение Отрадное]
+        R_old[Илья Андреевич] ---|брак| R_mat[Наталья]
+        R_old --> R_nata[Наташа - дочь]
+        R_old --> R_nik[Николай - сын]
+        R_old --> R_pet[Петя - младший сын]
+        R_old --> R_vera[Вера - дочь]
+        R_old --> R_son[Соня - племянница]
     end
 
-    subgraph Bolkonsky[Семья Болконские]
-        B_old[Князь Болконский] --> B_andr[Андрей]
+    subgraph Bolkonsky[Семья Болконские - Лысые горы]
+        B_old[Николай Андреевич] --> B_andr[Андрей]
         B_old --> B_mari[Марья]
         B_andr --> B_nikol[Николенька]
     end
 
-    subgraph Kuragin[Семья Курагины]
-        K_old[Князь Василий] --> K_hel[Элен]
-        K_old --> K_anat[Анатоль]
-        K_old --> K_ip[Ипполит]
+    subgraph Kuragin[Семья Курагины - СПб]
+        K_old[Князь Василий] ---|брак| K_aln[Алина]
+        K_old --> K_hel[Элен]
+        K_old --> K_anat[Анатоль - сын]
+        K_old --> K_ip[Ипполит - сын]
+        K_hel ---|брак| Piere[Пьер Безухов]
     end
 
     B_andr ---|брак| R_nata
